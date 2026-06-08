@@ -1,5 +1,5 @@
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // <-- Dodany useEffect
 import bannerImg from '../imports/baner_2_1-x1_1m-1.jpg';
 import smulorImg from '../imports/Smulor_png-2.png';
 import businessCardImg from '../imports/wizyt_wa.png';
@@ -11,6 +11,19 @@ import wizytkKozakImg from '../imports/wizyt_wka_Kozak.jpg';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
+  const [isLoading, setIsLoading] = useState(true); // <-- Stan ładowania
+
+  // Sprawdzanie, czy wszystkie zasoby (w tym ciężkie zdjęcia) się pobrały
+  useEffect(() => {
+    const handleLoad = () => setIsLoading(false);
+
+    if (document.readyState === 'complete') {
+      setIsLoading(false);
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -20,6 +33,14 @@ export default function App() {
 
   return (
     <div className="size-full bg-neutral-900 overflow-auto">
+      {/* Ekran ładowania (znika, gdy isLoading = false) */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-neutral-950 text-white flex flex-col justify-center items-center z-[9999]">
+          <div className="animate-spin rounded-full h-12 w-12 border-4 border-white/10 border-t-white mb-4"></div>
+          <p className="text-lg font-medium tracking-wider text-neutral-300">Ładowanie portfolio...</p>
+        </div>
+      )}
+
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-800 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4">
