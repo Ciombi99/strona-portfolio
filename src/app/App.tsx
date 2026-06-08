@@ -8,8 +8,8 @@ import wazImg from '../imports/waz.png';
 import dziara3Img from '../imports/dziara_3.png';
 import plakatImg from '../imports/plakat_poziomo.jpg';
 import wizytkKozakImg from '../imports/wizyt_wka_Kozak.jpg';
-import koligaImg from '../imports/koliga.jpg';
-import olinsImg from '../imports/olins.jpg';
+import koligaImg from '../imports/Koliga.jpg';
+import olinsImg from '../imports/olins.png';
 
 
 export default function App() {
