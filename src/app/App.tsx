@@ -259,6 +259,25 @@ export default function App() {
               </div>
             </div>
           </div>
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-6">Inne prace</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-2xl overflow-hidden flex items-center justify-center">
+                <ImageWithFallback
+                  src={koligaImg}
+                  alt="koliga"
+                  className="max-w-full max-h-[400px] object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-2xl overflow-hidden flex items-center justify-center">
+                <ImageWithFallback
+                  src={olinsImg}
+                  alt="damper ohlins"
+                  className="max-w-full max-h-[400px] object-contain"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
