@@ -77,9 +77,6 @@ export default function App() {
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
             Adrian Ciombor
           </h1>
-          <p className="text-2xl md:text-3xl text-neutral-300 mb-8">
-            Grafik Komputerowy
-          </p>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Pasjonat grafiki wektorowej i projektowania wizualnego
           </p>
