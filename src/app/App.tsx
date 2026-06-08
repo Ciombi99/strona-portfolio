@@ -263,6 +263,7 @@ export default function App() {
             </div>
           </div>
 <br />
+<br />
           <div>
             <h3 className="text-2xl font-semibold text-white mb-6">Inne prace</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
