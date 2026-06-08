@@ -8,6 +8,9 @@ import wazImg from '../imports/waz.png';
 import dziara3Img from '../imports/dziara_3.png';
 import plakatImg from '../imports/plakat_poziomo.jpg';
 import wizytkKozakImg from '../imports/wizyt_wka_Kozak.jpg';
+import koligaImg from '../imports/koliga.jpg';
+import olinsImg from '../imports/olins.jpg';
+
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
