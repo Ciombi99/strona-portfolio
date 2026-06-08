@@ -294,7 +294,16 @@ export default function App() {
                 </div>
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="text-neutral-300">PHPMyAdmin</span>
+                    <span className="text-neutral-300">PHP</span>
+                    <span className="text-neutral-400">Podstawowy</span>
+                  </div>
+                  <div className="h-2 bg-neutral-700 rounded-full overflow-hidden">
+                    <div className="h-full bg-neutral-400 rounded-full" style={{ width: '45%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-neutral-300">MySQL</span>
                     <span className="text-neutral-400">Podstawowy</span>
                   </div>
                   <div className="h-2 bg-neutral-700 rounded-full overflow-hidden">
@@ -313,6 +322,7 @@ export default function App() {
                 <span className="px-4 py-2 bg-neutral-700 rounded-full text-neutral-300">Tatuaże</span>
                 <span className="px-4 py-2 bg-neutral-700 rounded-full text-neutral-300">Downhill</span>
                 <span className="px-4 py-2 bg-neutral-700 rounded-full text-neutral-300">Kolarstwo grawitacyjne</span>
+                <span className="px-4 py-2 bg-neutral-700 rounded-full text-neutral-300">Muzyka</span>
               </div>
             </div>
           </div>
